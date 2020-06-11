@@ -60,7 +60,14 @@ const reviews = [{name: "Daniela", rating: 5, feedback:"Beautiful atmosphere and
 //   return array;
 // }
 // console.log(addRating(reviews, 'Ashton', 2, "Bathroom sucks"));
-/* Task 6: Add the following feedback to Reyna's rating - "this place is chill with really cool people, great for getting work done on weekdays"
+/* Task 6: Add the following feedback to Reyna's rating - "this place is chill with really cool people, great for getting work done on weekdays"*/
+
+// function addFeedback(array, index, feedback){
+//   array[index].feedback = feedback;
+//   return array;
+// }
+// console.log(addFeedback(reviews, 7, "This place is chill with really cool people, great for getting work done on weekdays"))
+
 
 
 
@@ -76,10 +83,10 @@ and should return a string in the format `{name} gave the restaurant a {rating},
  * For example, if getReviewByIndex is invoked with reviews and the number 0
  * it will return `Daniela gave the restaurant a 5 star review and their feedback was: Beautiful atmosphere and wonderful vegan options!`
 */
-function getReviewByIndex(reviews, index) {
-    /* code here */
-  }
-  
+// function getReviewByIndex(arr, index) {
+//     return `${arr[index].name} gave the restaurant a ${arr[index].rating} and their feedback was: ${arr[index].feedback}`
+//   }
+// console.log(getReviewByIndex(reviews, 3))
 
 /* Task 8: Write a function to get information about the most recent review called `getLastReview`
 
@@ -90,10 +97,11 @@ and should return a string in the format `name} gave the restaurant a {rating}, 
 
 For example, if getLastReview is invoked passing the reviews array it will return `Reyna gave the restaurant a 3.5 star review and their feedback was: "this place is chill with really cool people, great for getting work done on weekdays"`.
 */
-function getLastReview(/* code here */) {
-    /* code here */
-  } 
-
+// function getLastReview(arr) {
+//     lastReview = (arr.length-1)
+//     return `${arr[lastReview].name} gave the restaurant a ${arr[lastReview].rating} star review and their feedback was: ${arr[lastReview].feedback}`
+//   } 
+// console.log(getLastReview(reviews));
 
 ///////////////🍔☕️🍽 STRETCH🍔☕️🍽////////////////////
 
@@ -109,10 +117,15 @@ function getLastReview(/* code here */) {
     {name:"Lauren", rating: 4, feedback: "Absolutely love that they have karaoke Fridays! Food and drink selection is okay."}]
 */
 
- function getReviewByRating(/* code here */) {
-    /* code here */
-  }
-
+ function getReviewByRating(arr, rating) {
+    const ratingList= [];
+    for(let i = 0; i < arr.length; i++)
+      if(arr[i].rating === rating){
+        ratingList.push(arr[i]);
+      }
+      return ratingList
+     }
+console.log(getReviewByRating(reviews, 2));
   
 /** STRETCH 2: Write a function called 'getLongestReview' that returns an array containing all reviews longer than 15 words. 
   
