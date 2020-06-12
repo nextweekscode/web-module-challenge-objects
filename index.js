@@ -28,10 +28,10 @@ and should return a number.
 For example, burger.discount("teacher") would return 13.5 and burger.discount("public") would return 16.2*/
 // function discount(customer){
 //   if (customer === "teacher" || customer ==="student"){
-//     return (burger.price*.75);
+//     return (burger.price*.25);
 //   }
 //  else if (customer === "public"){
-//     return (burger.price*.90);
+//     return (burger.price*.10);
 //   }
 //   }
 // console.log(discount("teacher"));
@@ -125,7 +125,7 @@ For example, if getLastReview is invoked passing the reviews array it will retur
       }
       return ratingList
      }
-console.log(getReviewByRating(reviews, 2));
+console.log(getReviewByRating(reviews, 4));
   
 /** STRETCH 2: Write a function called 'getLongestReview' that returns an array containing all reviews longer than 15 words. 
   
